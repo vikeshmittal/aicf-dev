@@ -1,7 +1,9 @@
-import { Box, CssBaseline, Container } from "@mui/material";
+import { CssBaseline, Container } from "@mui/material";
 
-import SearchBox from "./components/search-box";
 import { AppLayout } from "./layout/app-layout";
+
+import routes from "./routes";
+import { RouterProvider } from "react-router";
 
 export default function App() {
   return (
@@ -9,19 +11,7 @@ export default function App() {
       <CssBaseline />
       <Container>
         <AppLayout>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            height="calc(100vh - 64px - 47px)"
-          >
-            <SearchBox
-              onSearch={(query) => {
-                console.log("User searched:", query);
-                // Trigger AICF intent → AI → view composition
-              }}
-            />
-          </Box>
+          <RouterProvider router={routes} />,
         </AppLayout>
       </Container>
     </>
