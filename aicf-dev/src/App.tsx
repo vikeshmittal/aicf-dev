@@ -1,6 +1,6 @@
 import { Box, CssBaseline, Container } from "@mui/material";
 
-import SearchBox from "./search-box";
+import SearchBox from "./components/search-box";
 import { AppLayout } from "./layout/app-layout";
 
 export default function App() {
